@@ -1,0 +1,9 @@
+name: starpython
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+    - -e .[dev]  # Installs package in editable mode with dev dependencies

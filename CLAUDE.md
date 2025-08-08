@@ -14,25 +14,43 @@ This is a 2D space exploration game built with pygame, featuring procedurally ge
 3. Provide detailed explanations when answering questions
 4. Guide through the reasoning and best practices
 
+### Educational Session Notes
+- Create or update session notes in the `notes/` directory when learning topics are discussed
+- Format: `notes/session-XXX-topic-name.md`
+- Include: topics covered, key decisions, important learning points, and next steps
+- Update after significant educational discussions or when explicitly requested
+
 ## Development Setup
 
 ### Python Environment
 - Python 3.12.8 is available on the system
-- Project intends to use conda for environment management (not yet configured)
-- pygame will be the primary game framework
+- Uses conda with conda-forge channel for environment management
+- pygame is the primary game framework
+- Dependencies managed through pyproject.toml with minimal environment.yml
 
-### Commands (To be established)
+### Commands
 ```bash
-# Environment setup (planned)
-conda create -n starpython python=3.12 pygame
+# Environment setup
+conda env create -f environment.yml
 conda activate starpython
 
-# Running the game (once main.py exists)
-python main.py
+# Running the game
+python -m starpython  # Executes __main__.py
 
 # Testing (once tests are created)
 pytest
+
+# Development tools (when configured)
+black .         # Code formatting
+mypy .          # Type checking
+flake8          # Linting
 ```
+
+### Project Structure Decisions
+- Package layout: `starpython/starpython/` containing the package
+- Entry point: `__main__.py` (not main.py) for `python -m` execution
+- Dependencies: Single source of truth in pyproject.toml
+- Environment: Minimal environment.yml using `pip install -e .`
 
 ## Architecture Goals
 
