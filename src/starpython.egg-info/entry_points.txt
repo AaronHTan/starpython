@@ -1,0 +1,2 @@
+[console_scripts]
+starpython = starpython.__main__:main

@@ -26,7 +26,7 @@ dev = [
 starpython = "starpython.__main__:main"
 
 [tool.setuptools.packages.find]
-where = ["."]
+where = ["src"]
 include = ["starpython*"]
 
 [tool.black]

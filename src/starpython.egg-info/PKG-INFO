@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: starpython
+Version: 0.1.0
+Summary: A 2D space exploration game with procedurally generated terrain
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: pygame>=2.5.0
+Requires-Dist: numpy>=1.24.0
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0.0; extra == "dev"
+Requires-Dist: black>=24.0.0; extra == "dev"
+Requires-Dist: flake8>=7.0.0; extra == "dev"
+Requires-Dist: mypy>=1.10.0; extra == "dev"
+Requires-Dist: ipython>=8.0.0; extra == "dev"
+
+# README
+
+This is a project to improve my fluency in python, to hone my software engineering practices, and to learn modern game
+development practices. The game uses pygame as the framework. The game is a 2d space exploration game across
+procedurally generated terrain.
+
+## Setup Guide
+
+This project uses conda as the environment. To install the dependencies properly, run the following commands.
