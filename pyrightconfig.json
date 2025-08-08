@@ -1,0 +1,9 @@
+{
+  "venvPath": "/Users/aarontan/miniconda3/envs",
+  "venv": "starpython",
+  "pythonVersion": "3.12",
+  "typeCheckingMode": "basic",
+  "reportMissingImports": true,
+  "reportMissingTypeStubs": false,
+  "useLibraryCodeForTypes": true
+}

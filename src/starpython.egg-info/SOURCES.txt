@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/starpython/__init__.py
+src/starpython/__main__.py
+src/starpython.egg-info/PKG-INFO
+src/starpython.egg-info/SOURCES.txt
+src/starpython.egg-info/dependency_links.txt
+src/starpython.egg-info/entry_points.txt
+src/starpython.egg-info/requires.txt
+src/starpython.egg-info/top_level.txt

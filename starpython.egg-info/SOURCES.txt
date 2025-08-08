@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+starpython.egg-info/PKG-INFO
+starpython.egg-info/SOURCES.txt
+starpython.egg-info/dependency_links.txt
+starpython.egg-info/entry_points.txt
+starpython.egg-info/requires.txt
+starpython.egg-info/top_level.txt

@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "starpython"
+version = "0.1.0"
+description = "A 2D space exploration game with procedurally generated terrain"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pygame>=2.5.0",
+    "numpy>=1.24.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "black>=24.0.0",
+    "flake8>=7.0.0",
+    "mypy>=1.10.0",
+    "ipython>=8.0.0",
+]
+
+[project.scripts]
+starpython = "starpython.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["starpython*"]
+
+[tool.black]
+line-length = 88
+target-version = ['py312']
+
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+warn_unused_configs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
