@@ -2,12 +2,14 @@
 Main function to run starpython. Run it via python -m starpython
 '''
 import pygame
+import esper
 
 
 def game_loop():
     pygame.init()
     screen = pygame.display.set_mode((800, 600))
     clock = pygame.time.Clock()
+    world = esper.switch_world("game")
     running = True
 
     while running:
