@@ -1,11 +1,13 @@
-'''
+''':wq
 graphics processing for various sprites
 '''
 import pygame
 import esper
 
 from dataclasses import dataclass, field
-from typing import Optional, Any
+from typing import Any
+
+from starpython.physics import Position
 
 
 @dataclass
@@ -26,5 +28,7 @@ class RenderSystem(esper.Processor):
 
     def process(self, *args: Any, **kwargs: Any) -> None:
         for entity, (sprite, position) in esper.get_components(Sprite, Position):
-            sprite.rect.
-            
+            sprite.rect.x = int(position.x)
+            sprite.rect.y = int(position.y)
+            self.screen.blit(sprite.image, (sprite.rect))
+            sprite.rect.topleft
