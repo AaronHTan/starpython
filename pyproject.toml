@@ -21,6 +21,7 @@ dev = [
     "flake8>=7.0.0",
     "mypy>=1.10.0",
     "ipython>=8.0.0",
+    "esper>=3.4",
 ]
 
 [project.scripts]

@@ -6,12 +6,14 @@ Requires-Python: >=3.12
 Description-Content-Type: text/markdown
 Requires-Dist: pygame>=2.5.0
 Requires-Dist: numpy>=1.24.0
+Requires-Dist: esper>=3.4
 Provides-Extra: dev
 Requires-Dist: pytest>=8.0.0; extra == "dev"
 Requires-Dist: black>=24.0.0; extra == "dev"
 Requires-Dist: flake8>=7.0.0; extra == "dev"
 Requires-Dist: mypy>=1.10.0; extra == "dev"
 Requires-Dist: ipython>=8.0.0; extra == "dev"
+Requires-Dist: esper>=3.4; extra == "dev"
 
 # README
 

@@ -21,14 +21,19 @@ class Sprite:
 
 
 class RenderSystem(esper.Processor):
-    def __init__(self, screen: pygame.Surface) -> None:
+    def __init__(self, screen: pygame.Surface, entity: int) -> None:
         super().__init__()
         self.screen = screen
-
+        self.entity = entity
 
     def process(self, *args: Any, **kwargs: Any) -> None:
-        for entity, (sprite, position) in esper.get_components(Sprite, Position):
-            sprite.rect.x = int(position.x)
-            sprite.rect.y = int(position.y)
-            self.screen.blit(sprite.image, (sprite.rect))
-            sprite.rect.topleft
+        player_position = esper.component_for_entity(self.entity, Position)
+        window_size = pygame.display.get_window_size()
+        
+        camera_offset_x = window_size[0] / 2 - player_position.x
+        camera_offset_y = window_size[1] / 2 - player_position.y
+        
+        for _, (sprite, position) in esper.get_components(Sprite, Position):
+            sprite.rect.x = int(position.x + camera_offset_x)
+            sprite.rect.y = int(position.y + camera_offset_y)
+            self.screen.blit(sprite.image, sprite.rect)

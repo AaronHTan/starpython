@@ -8,3 +8,12 @@ src/starpython.egg-info/dependency_links.txt
 src/starpython.egg-info/entry_points.txt
 src/starpython.egg-info/requires.txt
 src/starpython.egg-info/top_level.txt
+src/starpython/audio/__init__.py
+src/starpython/gameplay/__init__.py
+src/starpython/gameplay/gameplay.py
+src/starpython/graphics/__init__.py
+src/starpython/graphics/graphics.py
+src/starpython/input/__init__.py
+src/starpython/input/input.py
+src/starpython/physics/__init__.py
+src/starpython/physics/physics.py
