@@ -29,10 +29,10 @@ class RenderSystem(esper.Processor):
     def process(self, *args: Any, **kwargs: Any) -> None:
         player_position = esper.component_for_entity(self.entity, Position)
         window_size = pygame.display.get_window_size()
-        
+
         camera_offset_x = window_size[0] / 2 - player_position.x
         camera_offset_y = window_size[1] / 2 - player_position.y
-        
+
         for _, (sprite, position) in esper.get_components(Sprite, Position):
             sprite.rect.x = int(position.x + camera_offset_x)
             sprite.rect.y = int(position.y + camera_offset_y)

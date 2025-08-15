@@ -18,14 +18,18 @@ class Input:
 
 class InputSystem(esper.Processor):
     def process(self, *args: Any, **kwargs: Any) -> None:
-        for entity, (inp, player, acl) in esper.get_components(Input, Player, Acceleration):
-            if pygame.K_LEFT in inp.key_just_pressed:
-                acl.ax -= 50
-            if pygame.K_RIGHT in inp.key_just_pressed:
-                acl.ax += 50
-            if pygame.K_UP in inp.key_just_pressed:
-                acl.ay -= 50
-            if pygame.K_DOWN in inp.key_just_pressed:
-                acl.ay += 50
+
+        for entity, (player, acl) in esper.get_components(Player, Acceleration):
+            acl.ax = 0
+            acl.ay = 0
+            for _, inp in esper.get_component(Input):
+                if pygame.K_LEFT in inp.key_just_pressed:
+                    acl.ax = -500
+                if pygame.K_RIGHT in inp.key_just_pressed:
+                    acl.ax = 500
+                if pygame.K_UP in inp.key_just_pressed:
+                    acl.ay = -500
+                if pygame.K_DOWN in inp.key_just_pressed:
+                    acl.ay = 500
 
 

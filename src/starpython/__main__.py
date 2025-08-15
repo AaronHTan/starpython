@@ -47,9 +47,6 @@ def game_loop():
     esper.add_component(player_entity, Input(key_just_pressed=key_just_pressed, key_just_released=key_just_released))
     
     while running:
-
-        key_just_pressed.clear()
-        key_just_released.clear()
         dt = clock.tick(60) / 1000
         # Handle events
         for event in pygame.event.get():
@@ -62,6 +59,10 @@ def game_loop():
             elif event.type == pygame.KEYUP:
                 key_just_released.add(event.key)
 
+            if ((event.type == pygame.KEYDOWN or event.type == pygame.KEYUP) and
+                    event.key in key_just_pressed and event.key in key_just_released):
+                key_just_released.remove(event.key)
+                key_just_pressed.remove(event.key)
         screen.fill((0, 0, 0))
         esper.process(dt=dt)
 
