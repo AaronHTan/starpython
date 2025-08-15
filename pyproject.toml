@@ -11,6 +11,7 @@ requires-python = ">=3.12"
 dependencies = [
     "pygame>=2.5.0",
     "numpy>=1.24.0",
+    "esper>=3.4",
 ]
 
 [project.optional-dependencies]
@@ -20,6 +21,7 @@ dev = [
     "flake8>=7.0.0",
     "mypy>=1.10.0",
     "ipython>=8.0.0",
+    "esper>=3.4",
 ]
 
 [project.scripts]
